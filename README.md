@@ -44,21 +44,6 @@ docs/
   DESIGN.md                grid sizes and methodology notes
 ```
 
-## Release assets
-
-Model checkpoints and per-run logits are attached to the release, not stored in git:
-
-| Asset | Size | Contents |
-| --- | --- | --- |
-| `bbd02-results.zip` | 347 MB | main grid: 21 artifact packs, ledgers, logs |
-| `bbd05-results.zip` | 185 MB | revision runs: 14 artifact packs, ledgers, logs |
-
-Download: `<RELEASE OR ZENODO LINK>`
-
-Unzip both in the repository root. They add `results/packs/` (35 files); the ledgers they
-contain are identical to the ones in `results/ledger/`. The `.gitignore` keeps the packs out
-of git.
-
 ## Reproduce the paper from the released records
 
 This needs no GPU, no dataset download and no IBM account.
