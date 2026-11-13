@@ -1,0 +1,7 @@
+predictor,subset,n,exact,observed_ge,observed_lt,mae
+effective range on test logits (draft),all,3362,0.8593099345627603,1.0,0,0.2766210588935158
+effective range on test logits (draft),fixed s only,3002,0.8540972684876749,1.0,0,0.2961359093937375
+effective range on validation logits,all,3362,0.8593099345627603,1.0,0,0.27572873289708505
+effective range on validation logits,fixed s only,3002,0.8540972684876749,1.0,0,0.29513657561625584
+"nominal s, before training",all,3362,0.8584176085663295,1.0,0,0.2947650208209399
+"nominal s, before training",fixed s only,3002,0.8530979347101932,1.0,0,0.31645569620253167

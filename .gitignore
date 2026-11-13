@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+out/
+work/
+input/
+
+# Credentials: never commit
+.env
+*token*
+*apikey*
+qiskit-ibm.json
+
+# Dataset files and prepared arrays (not redistributed)
+*.npz
+data/
+prepared/*.npz
+
+# Large run artifacts (attach to a release instead)
+results/packs/
+*.zip
+*.pt
+*.pth
+
+# Executed Kaggle notebook copies (contain account identifiers in outputs)
+nb_*.ipynb
+__results___files/
+
+# LaTeX build files (top level only; training logs in results/logs are kept)
+/*.aux
+/*.bbl
+/*.blg
+/*.log
+/*.out

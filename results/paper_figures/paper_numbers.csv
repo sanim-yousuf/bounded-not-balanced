@@ -1,0 +1,31 @@
+section,claim,paper,value,source,agrees
+4,runs: main grid / second tier / total,"2,550 / 1,690 / 4,240","2,550 / 1,690 / 4,240","all ledgers (nb 02, 05, 06)",yes
+"abstract, 5.1, Fig. 2",main-grid post-hoc evaluations; exact; guess 0; exact if >=1 predicted,"1,880; 84%; 65%; 67%","1,880; 84%; 65%; 67%",main-grid ledger (nb 02),yes
+5.1,evaluations behind the per-head rates (incl. learned s),"3,362","3,362",rev_reachability_pretest_1.csv (nb 07),yes
+5.1,post-hoc loss vs C-host per evaluation: below / above threshold,39.5 / 0.8,39.5 / 0.8,main-grid ledger (nb 02),yes
+5.1,"difference in differences [95% CI], one-sided Wilcoxon p","-21.7 [-24.7, -18.7], p = 8.6e-12","-21.7 [-24.7, -18.7], p = 8.6e-12",main-grid ledger (nb 02),yes
+5.1,"TON_IoT, rho = 1000, s <= 2, post-hoc: runs predicting any benign flow",0,0 of 85,main-grid ledger (nb 02),yes
+5.2,"C-bounded CB minus C-bounded LA, s = 2, 5 seeds, all rho","+9.4 [1.8, 17.0]","+9.4 [1.8, 17.0]",main-grid ledger (nb 02),yes
+5.2,"Q CB minus Q LA, s = 2, 5 seeds, all rho","+1.3 [-2.0, 4.7]","+1.3 [-2.0, 4.7]",main-grid ledger (nb 02),yes
+5.2,"C-bounded CB minus C-host CB, s = 2, 5 seeds, all rho","-5.0 [-9.0, -1.0]","-5.0 [-9.0, -1.0]",main-grid ledger (nb 02),yes
+5.2,"Q CB minus C-host CB, s = 2, 5 seeds, all rho","-4.8 [-8.0, -1.5]","-4.8 [-8.0, -1.5]",main-grid ledger (nb 02),yes
+5.2,"C-bounded TON_IoT rho = 1000: CB against LA, same seeds",74.1 against 63.3,74.1 against 63.3,main-grid ledger (nb 02),yes
+5.2,"learned bias, post-hoc, TON_IoT rho = 1000, s = 2: C-bounded",28.4 to 70.0,28.4 to 70.0,main-grid ledger (nb 02),yes
+5.2,"learned bias, post-hoc, TON_IoT rho = 1000, s = 2: Q",23.0 to 58.1,23.0 to 58.1,main-grid ledger (nb 02),yes
+5.4,"Q minus C-bounded under LA at s = 1, 2","+20.5, +8.6","+20.5, +8.6",main-grid ledger (nb 02),yes
+5.4,"Q minus C-bounded under CE, range over the six scales",-2.9 to +7.7,-2.9 to +7.7,main-grid ledger (nb 02),yes
+Table 2,"Q seeds 0-4 minus C-bounded, CE / LA","+1.8 [-1.9, +5.5] / +11.3 [+5.6, +17.0]","+1.8 [-1.9, +5.5] / +11.3 [+5.6, +17.0]",main-grid ledger (nb 02),yes
+5.4,cells where C-bounded-wide is below C-bounded,11 of 12,11 of 12,main-grid ledger (nb 02),yes
+5.4,"data re-uploading minus Q, CE","+4.3 [-1.5, 10.1]","+4.3 [-1.5, 10.1]",main-grid ledger (nb 02),yes
+5.4,"data re-uploading minus Q, LA","+1.3 [-1.7, 4.3]","+1.3 [-1.7, 4.3]",main-grid ledger (nb 02),yes
+4,CICIoT2023 rows (sum of raw per-category rows),"7,845,673","7,845,673",dataset_summary.csv (nb 01),yes
+4,natural rho: TON_IoT / CICIoT2023,"12 / 2,775","12 / 2,775",dataset_summary.csv (nb 01),yes
+4,TON_IoT rows after cleaning (K = 8),"92,018","92,018",dataset_summary.csv (nb 01),yes
+"4, 7",training rows of the two rarest classes at rho = 1000,34 and 13,34 and 13,main-grid ledger (nb 02),yes
+6,session-1 contraction alpha (CE + post-hoc model),0.955,0.955,hw_results.json (nb 03),yes
+6,2 alpha s at s = 3 and at s = 2.35,5.7 and 4.49,5.7 and 4.49,hw_results.json (nb 03),yes
+6,session-2 per-qubit margin benign vs backdoor; realised threshold,4.57; 4.60,4.57; 4.60,"hw_results.json, hw2_tests.json (nb 06)",yes
+6,"512-shot s.d. of z_benign - z_backdoor, benign test inputs, simulation, no noise (10th-90th pct.)",-,"0.005 to 0.010 (median 0.006, n = 300)",checkpoint toniot8_r100_Q_s2.35_CE_seed0 (nb 05/06),info
+6,"512-shot s.d. of z_benign - z_backdoor, benign test inputs, hardware, session-2 per-qubit fits (10th-90th pct.)",about 0.03 to 0.05,"0.035 to 0.036 (median 0.035, n = 300)","checkpoint toniot8_r100_Q_s2.35_CE_seed0 (nb 05/06), hw_results.json (nb 06)",check
+4,"effective parameters and CZ gates, K = 8; K = 10",44 and 17; 50 and 18,44 and 17; 50 and 18,state-vector simulation,yes
+3,"Lemma 4 identity, max error",< 1e-10,2.2e-15,state-vector simulation,yes

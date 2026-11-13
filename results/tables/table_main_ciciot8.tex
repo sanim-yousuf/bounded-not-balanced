@@ -1,0 +1,18 @@
+% Macro-F1 (\%) on the balanced test set, CICIoT2023 (K = 8); mean $\pm$ s.d. over seeds. Bold: best head per column (references excluded). LightGBM uses class weights in every column.
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{CE} & \multicolumn{3}{c}{post-hoc} & \multicolumn{3}{c}{LA} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+Head & $\rho$=10 & 100 & 1000 & $\rho$=10 & 100 & 1000 & $\rho$=10 & 100 & 1000 \\
+\midrule
+C-host & 69.0\,{\scriptsize$\pm$1.6} & 61.0\,{\scriptsize$\pm$1.5} & 52.6\,{\scriptsize$\pm$3.0} & 71.0\,{\scriptsize$\pm$0.9} & 67.1\,{\scriptsize$\pm$1.2} & \textbf{62.5}\,{\scriptsize$\pm$1.9} & 68.9\,{\scriptsize$\pm$2.1} & 67.0\,{\scriptsize$\pm$1.8} & 59.8\,{\scriptsize$\pm$3.3} \\
+C-bounded ($s$=2) & 66.2\,{\scriptsize$\pm$1.9} & 55.7\,{\scriptsize$\pm$3.4} & 47.2\,{\scriptsize$\pm$2.8} & 68.4\,{\scriptsize$\pm$1.6} & 51.7\,{\scriptsize$\pm$2.4} & 24.8\,{\scriptsize$\pm$2.1} & 68.9\,{\scriptsize$\pm$1.0} & 57.1\,{\scriptsize$\pm$6.5} & 43.0\,{\scriptsize$\pm$2.7} \\
+C-cosine ($s$=2) & 66.0\,{\scriptsize$\pm$1.2} & 55.4\,{\scriptsize$\pm$2.5} & 38.4\,{\scriptsize$\pm$1.4} & 68.8\,{\scriptsize$\pm$1.2} & 2.8\,{\scriptsize$\pm$0.0} & 2.8\,{\scriptsize$\pm$0.0} & 68.8\,{\scriptsize$\pm$1.1} & 61.8\,{\scriptsize$\pm$1.3} & 54.6\,{\scriptsize$\pm$2.8} \\
+Q-noent ($s$=2) & 66.8\,{\scriptsize$\pm$1.0} & 60.1\,{\scriptsize$\pm$1.9} & 52.1\,{\scriptsize$\pm$1.9} & 67.6\,{\scriptsize$\pm$1.0} & 49.5\,{\scriptsize$\pm$2.9} & 26.9\,{\scriptsize$\pm$1.3} & 68.4\,{\scriptsize$\pm$0.7} & 63.7\,{\scriptsize$\pm$3.2} & 54.8\,{\scriptsize$\pm$4.1} \\
+Q ($s$=2) & 66.7\,{\scriptsize$\pm$1.0} & 59.0\,{\scriptsize$\pm$2.1} & 51.6\,{\scriptsize$\pm$2.8} & 69.0\,{\scriptsize$\pm$1.0} & 51.9\,{\scriptsize$\pm$3.1} & 26.5\,{\scriptsize$\pm$1.2} & 69.2\,{\scriptsize$\pm$0.9} & 62.4\,{\scriptsize$\pm$3.9} & 55.6\,{\scriptsize$\pm$2.3} \\
+Q ($s$=4) & \textbf{69.3}\,{\scriptsize$\pm$1.1} & \textbf{63.0}\,{\scriptsize$\pm$1.4} & \textbf{53.9}\,{\scriptsize$\pm$1.9} & \textbf{71.0}\,{\scriptsize$\pm$0.7} & \textbf{67.6}\,{\scriptsize$\pm$0.8} & 62.5\,{\scriptsize$\pm$1.8} & \textbf{70.9}\,{\scriptsize$\pm$1.0} & \textbf{67.2}\,{\scriptsize$\pm$1.3} & \textbf{62.5}\,{\scriptsize$\pm$1.6} \\
+\midrule
+MLP (ref.) & 70.8\,{\scriptsize$\pm$1.3} & 65.2\,{\scriptsize$\pm$1.2} & 57.7\,{\scriptsize$\pm$2.3} & 72.2\,{\scriptsize$\pm$0.9} & 69.1\,{\scriptsize$\pm$1.1} & 64.0\,{\scriptsize$\pm$1.5} & 72.2\,{\scriptsize$\pm$0.5} & 69.3\,{\scriptsize$\pm$1.0} & 64.3\,{\scriptsize$\pm$0.8} \\
+LightGBM (ref.) & 88.0\,{\scriptsize$\pm$0.3} & 83.8\,{\scriptsize$\pm$0.8} & 71.6\,{\scriptsize$\pm$2.0} & 88.0\,{\scriptsize$\pm$0.3} & 83.8\,{\scriptsize$\pm$0.8} & 71.6\,{\scriptsize$\pm$2.0} & 88.0\,{\scriptsize$\pm$0.3} & 83.8\,{\scriptsize$\pm$0.8} & 71.6\,{\scriptsize$\pm$2.0} \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,47 @@
+{
+ "probe": {
+  "job_id": "dbi9i5ohoj4c73b5oolg",
+  "submitted": "2026-10-30 13:18:15",
+  "n": 20,
+  "shots": 1024
+ },
+ "main": {
+  "job_id": "dbi9i95ep8hs73andgs0",
+  "submitted": "2026-10-30 13:18:28",
+  "order": [
+   [
+    "LA",
+    "A"
+   ],
+   [
+    "LA",
+    "B"
+   ],
+   [
+    "CE",
+    "A"
+   ]
+  ],
+  "shots": 512,
+  "path": [
+   91,
+   98,
+   111,
+   110,
+   109,
+   108,
+   107,
+   106,
+   105,
+   117
+  ],
+  "backend": "ibm_kingston",
+  "n_test": 600,
+  "n_cal": 50,
+  "models": {
+   "LA": "toniot8_r100_Q_s3_LA_seed0",
+   "CE": "toniot8_r100_Q_s3_CE_seed0"
+  },
+  "dry_run": false
+ }
+}
