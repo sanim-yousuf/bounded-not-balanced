@@ -310,7 +310,9 @@ def natural_prior_table(df: pd.DataFrame, results, rhos=("100", "1000")) -> pd.D
         pi_nat, benign = priors[r.dataset]
         conds = [(r.loss if r.model != "LightGBM" else "LightGBM", z["z_test"])]
         if r.loss in ("CE", "CB") and r.model != "LightGBM":
-            conds.append(("post-hoc", posthoc(z["z_test"], z["log_pi"], 1.0)))
+            # post-hoc adjustment of a CB-trained model corrects for the prior twice; label it apart
+            cond_ph = "post-hoc" if r.loss == "CE" else f"{r.loss}+post-hoc"
+            conds.append((cond_ph, posthoc(z["z_test"], z["log_pi"], 1.0)))
         y = z["y_test"]
         k = len(pi_nat)
         for cond, zz in conds:

@@ -11,6 +11,7 @@ Every file here is an unmodified output of one of the Kaggle notebooks in `noteb
 | `hardware/session2/` | notebooks 06 and 07 | `hw_results.json`, `hw2_tests.json` for IBM job `dbiucdghoj4c73b6urqg` |
 | `prepared/` | notebook 01 | class counts and split metadata for each dataset (no feature data) |
 | `paper_figures/` | notebook 07 | the data figures as printed, and `paper_numbers.csv` |
+| `tables/round2/` | notebook 07 ("Second-revision analyses") | numbers added in the second revision: reachability baselines, learned scales, planned H2a test, H3 by scale and loss, operating point, hardware intervals |
 
 `paper_numbers.csv` lists each manuscript number that no table prints, beside the value
 recomputed from these records. `tools/check_paper_numbers.py` recomputes it.

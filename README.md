@@ -89,6 +89,13 @@ It lists each value beside the one in the paper. All 28 checkable values agree. 
 standard deviation (Section 6) also needs the prepared TON_IoT arrays, which notebook 01 builds
 from the public data; with them, all 29 agree.
 
+**Second-revision tables** (learned scales, reachability baselines, the planned H2a test, H3 by scale and
+loss, the operating point, hardware intervals) come from the cell "Second-revision analyses" of notebook 07;
+`python tools/revision_round2.py` recomputes them locally with the release assets unpacked. Released copies:
+`results/tables/round2/`.
+
+**Correction.** An earlier version of `results/tables/rev_natural_prior.csv` pooled post-hoc adjustment of CE-trained and class-balanced C-host runs. The analysis code now labels the latter `CB+post-hoc`; only the C-host post-hoc rows changed .
+
 ## Rerun the experiments
 
 The notebooks are written for Kaggle (GPU T4 x2). `docs/KAGGLE_INSTRUCTIONS.md` gives the order,
@@ -129,6 +136,16 @@ Python 3 with PyTorch, NumPy, pandas, SciPy, scikit-learn, statsmodels, LightGBM
 pyarrow. The quantum packages are pinned to the versions used for the paper: `qiskit==2.6.1`,
 `qiskit-ibm-runtime==0.51.0`, `qiskit-aer==0.18.0`.
 
+## Citation
+
+```bibtex
+@inproceedings{fahim2027bounded,
+  title     = {Bounded, Not Balanced: What Quantum Classifier Heads Do to Rare-Attack Detection},
+  author    = {Fahim, Sanim Yousuf and Hossain, Mohammad Arif},
+  booktitle = {<VENUE, to be filled in after acceptance>},
+  year      = {2027}
+}
+```
 
 ## License
 
